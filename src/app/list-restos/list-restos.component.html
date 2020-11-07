@@ -1,0 +1,22 @@
+<app-navbar [pageTitle]="title"></app-navbar>
+<main id="list-restaurants">
+    <div>
+        <section *ngFor="let restaurant of restaurants" id={{restaurant.id}}>
+            <article>
+                <h3>{{restaurant.name}} <strong (click)="openDialog(restaurant.id)">x</strong></h3>
+            </article>
+            
+            <address (click)="openDialog()">{{restaurant.address}}</address>
+            <span>
+                <div>
+                    Stars: 
+                    <article *ngFor="let star of restaurant.stars">
+                        <svg-icon key="start" color="hotpink" fontSize="20px"></svg-icon>
+                    </article>
+                </div>
+                
+                <a routerLink="/update-restaurant/{{restaurant.id}}">Update</a>
+            </span>
+        </section>
+    </div>
+</main>

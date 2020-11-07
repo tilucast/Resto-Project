@@ -1,0 +1,77 @@
+#list-restaurants{
+    width: 100%;
+    padding: 5rem 10rem;
+}
+
+div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 2rem 2rem;
+}
+
+section{
+    padding: 2rem 4rem;
+    min-width: 50rem;
+    border: 1px solid rgb(82, 82, 82);
+    background-image: linear-gradient(to right, rgb(158, 8, 158), rgb(168, 0, 168));
+}
+
+section h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+section article h3{
+    display: flex;
+    justify-content: space-between;
+}
+
+section article h3 strong{
+    color: rgb(233, 42, 42);
+    cursor: pointer;
+
+    transition: all .2s;
+}
+
+section article h3 strong:hover{
+    color: darkorchid;
+}
+
+section span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+}
+
+section span div{
+    display: flex;
+    align-items: center;
+}
+
+section span div + a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all .2s;
+}
+
+section span div + a:hover{
+    color: rgb(151, 61, 253);
+}
+
+section h3, address, span{
+    color: rgb(252, 241, 255);;
+}
+
+section address, span{
+    font-weight: 600;
+}
+
+svg-icon{
+    margin-left: .3rem;
+}
+    

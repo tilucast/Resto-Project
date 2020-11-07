@@ -1,0 +1,54 @@
+<app-navbar [pageTitle]="title"></app-navbar>
+
+<main>
+    <article *ngIf="errorMsg" class="error-message">
+        <strong >{{errorMsg}}</strong>
+        <strong (click)="closeErrorMsg()">X</strong>
+    </article>
+    
+
+    <form #createRestaurantForm="ngForm" (ngSubmit)="createRestaurant(createRestaurantForm.value); createRestaurantForm.resetForm()" ngNativeValidate>
+    
+        <mat-form-field color="accent">
+            <mat-label>Restaurant Name</mat-label>
+            <input 
+                matInput 
+                placeholder="Ex. MacDonald's" 
+                type="text" name="name"
+                id="name"
+                required ngModel
+            >
+        </mat-form-field>
+    
+        <mat-form-field color="accent">
+            <mat-label>Restaurant Address</mat-label>
+            <input 
+                matInput 
+                placeholder="Ex. 4th of July, Texas, USA" 
+                type="text" 
+                required name="address"
+                id="address"
+                ngModel
+            >
+        </mat-form-field>
+    
+        <mat-form-field color="accent">
+            <mat-label>Select how many stars</mat-label>
+            <mat-select 
+                required
+                name="stars"
+                id="stars"
+                ngModel
+            >
+                <mat-option *ngFor="let star of stars" [value]="star.value">
+                    {{star.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <button [disabled]="!createRestaurantForm.valid" type="submit" mat-raised-button color="accent">Create</button>
+    
+    </form>
+
+    
+</main>

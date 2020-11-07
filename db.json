@@ -1,0 +1,55 @@
+{
+  "restaurants": [
+    {
+      "name": "Ratattouille",
+      "address": "Paris, France",
+      "stars": [
+        "",
+        "",
+        ""
+      ],
+      "id": 2
+    },
+    {
+      "name": "MacDonald's",
+      "address": "Washington, USA",
+      "stars": [
+        "",
+        ""
+      ],
+      "id": 4
+    },
+    {
+      "name": "Mineirinho",
+      "address": "Arapoanga, rua da água de côco",
+      "stars": [
+        "",
+        "",
+        ""
+      ],
+      "id": 5
+    },
+    {
+      "name": "Burger King",
+      "address": "Rio Branco, Brasil",
+      "stars": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "id": 6
+    },
+    {
+      "name": "KFC",
+      "address": "Washington, USA",
+      "stars": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "id": 7
+    }
+  ]
+}

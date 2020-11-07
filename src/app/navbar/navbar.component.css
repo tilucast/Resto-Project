@@ -1,0 +1,53 @@
+nav{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+
+    width: 100%;
+    background-color: blueviolet;
+    padding: 2rem;
+}
+
+nav .page-title{
+   margin-left: 200px;
+}
+
+nav .page-title h1{
+    font-size: 2.5rem;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .2s;
+
+    border-bottom: 2px solid rgb(202, 159, 243);
+}
+
+nav a:hover{
+    color: rgb(189, 131, 243);
+    border-color: rgb(233, 147, 180);
+}
+
+nav section + section h1{
+    margin: 0;
+    color: antiquewhite;
+    font-weight: 700;
+}
+
+@media (max-width: 880px){
+    nav .app-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .app-links a:first-child{
+        margin-bottom: 1rem;
+    }
+}

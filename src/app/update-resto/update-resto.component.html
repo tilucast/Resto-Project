@@ -1,0 +1,51 @@
+<app-navbar [pageTitle]="title"></app-navbar>
+<main>
+   
+    <form #createRestaurantForm="ngForm" (ngSubmit)="updateRestaurant(createRestaurantForm.value)" ngNativeValidate>
+    
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Restaurant Name</mat-label>
+            <input 
+                matInput 
+                placeholder="Ex. MacDonald's" 
+                type="text" 
+                name="name"
+                required 
+                [ngModel]="restaurant.name"
+            >
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Restaurant Address</mat-label>
+            <input 
+                matInput 
+                placeholder="Ex. 4th of July, Texas, USA" 
+                type="text" 
+                required 
+                name="address"
+                [ngModel]="restaurant.address"
+            >
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Select how many stars</mat-label>
+            <mat-select 
+                required
+                name="stars"
+                id="stars"
+                [(value)]="selected"
+                [ngModel]="selected"
+            >
+
+                <mat-option *ngFor="let star of stars" [value]="star.value" >
+                    {{star.viewValue}}
+                </mat-option>
+
+            </mat-select>
+        </mat-form-field>
+    
+        <button type="submit" mat-raised-button color="accent">Update</button>
+    
+    </form>
+
+</main>
